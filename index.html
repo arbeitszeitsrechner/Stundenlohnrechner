@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stundenlohnrechner 2026 – Stundenlohn aus Gehalt berechnen</title>
+<meta name="description" content="Stundenlohnrechner 2026: Monats- oder Jahresgehalt eingeben und sofort den Brutto-Stundenlohn sehen – mit Mindestlohn-Vergleich (13,90 €), Gehalt aus Stundenlohn und Verdienst inkl. Zuschlägen.">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="Stundenlohnrechner 2026 – Stundenlohn aus Gehalt berechnen">
+<meta property="og:description" content="Gehalt in Stundenlohn umrechnen, mit dem Mindestlohn vergleichen und Verdienst inklusive Zuschlägen berechnen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Roboto+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebApplication",
+      "name":"Stundenlohnrechner",
+      "applicationCategory":"FinanceApplication",
+      "operatingSystem":"Browser",
+      "inLanguage":"de-DE",
+      "description":"Stundenlohnrechner zur Umrechnung von Monats-, Wochen- oder Jahresgehalt in den Brutto-Stundenlohn, mit Mindestlohn-Vergleich und Verdienstrechner inklusive Zuschlägen.",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Wie berechne ich meinen Stundenlohn aus dem Monatsgehalt?","acceptedAnswer":{"@type":"Answer","text":"Teilen Sie Ihr Bruttomonatsgehalt durch die durchschnittlichen Arbeitsstunden pro Monat. Diese ergeben sich aus Wochenstunden × 52 ÷ 12. Bei 3.000 Euro und 40 Wochenstunden sind das 3.000 ÷ 173,33 = 17,31 Euro pro Stunde."}},
+        {"@type":"Question","name":"Wie hoch ist der Mindestlohn 2026?","acceptedAnswer":{"@type":"Answer","text":"Seit dem 1. Januar 2026 beträgt der gesetzliche Mindestlohn in Deutschland 13,90 Euro brutto pro Stunde. Zum 1. Januar 2027 steigt er auf 14,60 Euro."}},
+        {"@type":"Question","name":"Wie viel ist 2.500 Euro brutto im Stundenlohn?","acceptedAnswer":{"@type":"Answer","text":"Bei 40 Wochenstunden entspricht ein Bruttogehalt von 2.500 Euro einem Stundenlohn von 14,42 Euro. Bei 35 Wochenstunden sind es 16,48 Euro."}},
+        {"@type":"Question","name":"Rechnet der Stundenlohnrechner brutto oder netto?","acceptedAnswer":{"@type":"Answer","text":"Der Stundenlohnrechner rechnet mit Bruttobeträgen. Der Nettostundenlohn hängt von Steuerklasse, Kirchensteuer und Sozialabgaben ab und fällt individuell niedriger aus."}},
+        {"@type":"Question","name":"Wie viele Stunden darf ich im Minijob 2026 arbeiten?","acceptedAnswer":{"@type":"Answer","text":"Die Minijob-Grenze liegt 2026 bei 603 Euro im Monat. Zum Mindestlohn von 13,90 Euro sind das rund 43 Stunden pro Monat."}},
+        {"@type":"Question","name":"Zählen Weihnachtsgeld und Urlaubsgeld zum Stundenlohn?","acceptedAnswer":{"@type":"Answer","text":"Wenn Sie Ihren echten Stundenlohn kennen möchten, sollten Sie regelmäßige Sonderzahlungen einbeziehen. Tragen Sie diese im Stundenlohnrechner als jährliche Sonderzahlung ein."}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a href="#" class="logo" aria-label="Stundenlohnrechner Startseite">
+      <span class="logo-ic" aria-hidden="true">€</span>
+      <span class="logo-tx">Stundenlohn<b>rechner</b></span>
+    </a>
+    <button class="burger" aria-label="Menü" onclick="document.querySelector('.menu').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <nav class="menu">
+      <a href="#" class="act">Stundenlohnrechner</a>
+      <a href="#mindestlohn">Mindestlohn 2026</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="chip">Aktuell: Mindestlohn 13,90 € (2026)</span>
+      <h1>Stundenlohnrechner: Stundenlohn aus Gehalt berechnen</h1>
+      <p class="hero-p">Wie viel verdienen Sie wirklich pro Stunde? Der Stundenlohnrechner wandelt Ihr Monats-, Wochen- oder Jahresgehalt in einen Brutto-Stundenlohn um und vergleicht ihn mit dem Mindestlohn. Ihre tatsächlich geleisteten Stunden ermitteln Sie vorher mit dem <a href="https://arbeitszeitsrechner.com.de/">arbeitszeit rechner</a>.</p>
+    </div>
+    <div class="hero-card" aria-hidden="true">
+      <span class="hc-label">Beispiel · 40 Std./Woche</span>
+      <div class="hc-row"><span>3.000 € / Monat</span><b>17,31 €</b></div>
+      <div class="hc-row"><span>2.500 € / Monat</span><b>14,42 €</b></div>
+      <div class="hc-row"><span>Mindestlohn 2026</span><b class="lime">13,90 €</b></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <!-- ================= CALCULATOR ================= -->
+  <section class="calc" id="rechner" aria-label="Stundenlohnrechner">
+    <div class="tabs" role="tablist">
+      <button class="tab on" data-p="p1" role="tab"><b>Gehalt → Stundenlohn</b><small>Was verdiene ich pro Stunde?</small></button>
+      <button class="tab" data-p="p2" role="tab"><b>Stundenlohn → Gehalt</b><small>Was bringt mein Stundenlohn?</small></button>
+      <button class="tab" data-p="p3" role="tab"><b>Verdienst berechnen</b><small>Stunden × Lohn + Zuschlag</small></button>
+    </div>
+
+    <!-- P1 -->
+    <div class="panel on" id="p1">
+      <div class="grid">
+        <div class="inputs">
+          <div class="f">
+            <label for="g-amount">Bruttogehalt</label>
+            <div class="money"><input type="number" id="g-amount" value="3000" min="0" step="10" inputmode="decimal"><span>€</span></div>
+          </div>
+          <div class="f">
+            <label>Zeitraum</label>
+            <div class="radios" id="g-period">
+              <button type="button" data-v="12" class="on">Monat</button>
+              <button type="button" data-v="1">Jahr</button>
+              <button type="button" data-v="52">Woche</button>
+            </div>
+          </div>
+          <div class="f2">
+            <div class="f">
+              <label for="g-hours">Wochenstunden</label>
+              <input type="number" id="g-hours" value="40" min="1" max="80" step="0.5">
+            </div>
+            <div class="f">
+              <label for="g-days">Arbeitstage / Woche</label>
+              <input type="number" id="g-days" value="5" min="1" max="7">
+            </div>
+          </div>
+          <div class="f">
+            <label for="g-extra">Sonderzahlungen pro Jahr <em>optional – z. B. Weihnachts- & Urlaubsgeld</em></label>
+            <div class="money"><input type="number" id="g-extra" value="0" min="0" step="50"><span>€</span></div>
+          </div>
+          <div class="presets">
+            <span>Schnellwahl:</span>
+            <button type="button" data-h="40">Vollzeit 40 h</button>
+            <button type="button" data-h="38.5">38,5 h</button>
+            <button type="button" data-h="35">35 h</button>
+            <button type="button" data-h="20">Teilzeit 20 h</button>
+          </div>
+        </div>
+
+        <div class="result" aria-live="polite">
+          <span class="r-label">Ihr Brutto-Stundenlohn</span>
+          <div class="r-big"><span id="r-hour">17,31</span><small>€ / Std.</small></div>
+          <div class="mw">
+            <div class="mw-top"><span>Vergleich Mindestlohn 13,90 €</span><b id="r-mwpct">+25 %</b></div>
+            <div class="mw-bar"><i id="r-mwbar"></i><em style="left:50%"></em></div>
+            <p id="r-mwtxt">Ihr Stundenlohn liegt über dem gesetzlichen Mindestlohn.</p>
+          </div>
+          <div class="r-grid">
+            <div><span>Pro Tag</span><b id="r-day">138,46 €</b></div>
+            <div><span>Pro Woche</span><b id="r-week">692,31 €</b></div>
+            <div><span>Pro Monat</span><b id="r-month">3.000,00 €</b></div>
+            <div><span>Pro Jahr</span><b id="r-year">36.000,00 €</b></div>
+            <div><span>Pro Minute</span><b id="r-min">0,29 €</b></div>
+            <div><span>Stunden / Monat</span><b id="r-mh">173,33</b></div>
+          </div>
+          <button class="copy" id="c1">Ergebnis kopieren</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- P2 -->
+    <div class="panel" id="p2">
+      <div class="grid">
+        <div class="inputs">
+          <div class="f">
+            <label for="s-rate">Stundenlohn (brutto)</label>
+            <div class="money"><input type="number" id="s-rate" value="16.50" min="0" step="0.05"><span>€</span></div>
+          </div>
+          <div class="f2">
+            <div class="f">
+              <label for="s-hours">Wochenstunden</label>
+              <input type="number" id="s-hours" value="40" min="1" max="80" step="0.5">
+            </div>
+            <div class="f">
+              <label for="s-days">Arbeitstage / Woche</label>
+              <input type="number" id="s-days" value="5" min="1" max="7">
+            </div>
+          </div>
+          <div class="tipbox">Tipp: Mit 13,90 € testen Sie, was eine Vollzeitstelle zum Mindestlohn 2026 im Monat bringt.</div>
+          <button type="button" class="ghost-btn" id="s-mw">Mindestlohn 13,90 € einsetzen</button>
+        </div>
+        <div class="result">
+          <span class="r-label">Ihr Brutto-Monatsgehalt</span>
+          <div class="r-big"><span id="s-month">2.860,00</span><small>€ / Monat</small></div>
+          <div class="r-grid">
+            <div><span>Pro Tag</span><b id="s-day">132,00 €</b></div>
+            <div><span>Pro Woche</span><b id="s-week">660,00 €</b></div>
+            <div><span>Pro Jahr</span><b id="s-year">34.320,00 €</b></div>
+            <div><span>Stunden / Monat</span><b id="s-mh">173,33</b></div>
+          </div>
+          <button class="copy" id="c2">Ergebnis kopieren</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- P3 -->
+    <div class="panel" id="p3">
+      <div class="grid">
+        <div class="inputs">
+          <div class="f">
+            <label for="v-time">Gearbeitete Zeit <em>als 7:45 oder 7,75</em></label>
+            <input type="text" id="v-time" value="8:30" inputmode="decimal">
+          </div>
+          <div class="f">
+            <label for="v-rate">Stundenlohn (brutto)</label>
+            <div class="money"><input type="number" id="v-rate" value="15" min="0" step="0.05"><span>€</span></div>
+          </div>
+          <div class="f">
+            <label>Zuschlag</label>
+            <div class="radios" id="v-plus">
+              <button type="button" data-v="0" class="on">0 %</button>
+              <button type="button" data-v="25">25 %</button>
+              <button type="button" data-v="50">50 %</button>
+              <button type="button" data-v="100">100 %</button>
+            </div>
+          </div>
+          <div class="tipbox">Zuschläge gelten oft für Überstunden, Nacht-, Sonn- oder Feiertagsarbeit – die genaue Höhe regelt Ihr Arbeits- oder Tarifvertrag.</div>
+        </div>
+        <div class="result">
+          <span class="r-label">Ihr Verdienst (brutto)</span>
+          <div class="r-big"><span id="v-total">127,50</span><small>€</small></div>
+          <div class="r-grid">
+            <div><span>Stunden dezimal</span><b id="v-dec">8,50</b></div>
+            <div><span>Grundlohn</span><b id="v-base">127,50 €</b></div>
+            <div><span>Zuschlag</span><b id="v-add">0,00 €</b></div>
+            <div><span>Effektiv / Std.</span><b id="v-eff">15,00 €</b></div>
+          </div>
+          <button class="copy" id="c3">Ergebnis kopieren</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FORMEL ================= -->
+  <section class="sec two">
+    <div>
+      <p class="eye">So rechnet der Stundenlohnrechner</p>
+      <h2>Die Formel für den Stundenlohn</h2>
+      <p>Ein Monat hat im Durchschnitt nicht vier, sondern rund 4,33 Wochen. Deshalb rechnet der Stundenlohnrechner nicht mit Wochenstunden × 4, sondern mit dem genauen Jahresdurchschnitt: <b>Wochenstunden × 52 Wochen ÷ 12 Monate</b>.</p>
+      <p>Wer 40 Stunden pro Woche arbeitet, kommt so auf durchschnittlich 173,33 Arbeitsstunden im Monat. Teilt man das Bruttogehalt durch diesen Wert, erhält man den Brutto-Stundenlohn. Sonderzahlungen wie Weihnachts- oder Urlaubsgeld werden auf das Jahr verteilt und erhöhen Ihren tatsächlichen Stundenlohn.</p>
+    </div>
+    <div class="formula">
+      <div class="fx"><span>Stundenlohn</span><b>=</b><div class="frac"><i>Monatsgehalt</i><i>Wochenstunden × 4,33</i></div></div>
+      <div class="fx-ex">Beispiel: 3.000 € ÷ (40 × 52 ÷ 12) = <b>17,31 €</b></div>
+    </div>
+  </section>
+
+  <!-- ================= TABELLE ================= -->
+  <section class="sec">
+    <p class="eye">Übersicht</p>
+    <h2>Stundenlohn-Tabelle: Monatsgehalt in Stundenlohn</h2>
+    <p class="intro">Die Tabelle zeigt typische Bruttogehälter und den passenden Stundenlohn bei Vollzeit (40 und 35 Stunden) sowie Teilzeit (20 Stunden). Für Ihren genauen Wert nutzen Sie den Stundenlohnrechner oben.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Brutto / Monat</th><th>40 Std. / Woche</th><th>35 Std. / Woche</th><th>20 Std. / Woche</th></tr></thead>
+        <tbody>
+          <tr><td>2.000 €</td><td>11,54 €</td><td>13,19 €</td><td>23,08 €</td></tr>
+          <tr><td>2.500 €</td><td>14,42 €</td><td>16,48 €</td><td>28,85 €</td></tr>
+          <tr><td>3.000 €</td><td>17,31 €</td><td>19,78 €</td><td>34,62 €</td></tr>
+          <tr><td>3.500 €</td><td>20,19 €</td><td>23,08 €</td><td>40,38 €</td></tr>
+          <tr><td>4.000 €</td><td>23,08 €</td><td>26,37 €</td><td>46,15 €</td></tr>
+          <tr><td>4.500 €</td><td>25,96 €</td><td>29,67 €</td><td>51,92 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="hint">Hinweis: 2.000 € brutto bei 40 Wochenstunden ergeben nur 11,54 € pro Stunde und liegen damit unter dem Mindestlohn 2026.</p>
+  </section>
+
+  <!-- ================= MINDESTLOHN ================= -->
+  <section class="sec" id="mindestlohn">
+    <p class="eye">Mindestlohn</p>
+    <h2>Mindestlohn 2026 und 2027 im Überblick</h2>
+    <div class="mw-cards">
+      <div class="mwc dark"><span>seit 01.01.2026</span><b>13,90 €</b><p>gesetzlicher Mindestlohn pro Stunde (brutto)</p></div>
+      <div class="mwc"><span>ab 01.01.2027</span><b>14,60 €</b><p>zweite Stufe der beschlossenen Erhöhung</p></div>
+      <div class="mwc"><span>Vollzeit 2026</span><b>≈ 2.409 €</b><p>Monatsbrutto bei 40 Std. pro Woche</p></div>
+      <div class="mwc"><span>Minijob 2026</span><b>603 €</b><p>Verdienstgrenze pro Monat – rund 43 Std. zum Mindestlohn</p></div>
+    </div>
+    <div class="two mt">
+      <div>
+        <p>Der gesetzliche Mindestlohn ist die Untergrenze, die Arbeitgeber in Deutschland pro Arbeitsstunde zahlen müssen. Er gilt für fast alle volljährigen Beschäftigten – auch für Minijobber, Aushilfen und Teilzeitkräfte. Ausnahmen bestehen unter anderem für Auszubildende, Pflichtpraktikanten und Langzeitarbeitslose in den ersten sechs Monaten einer neuen Beschäftigung.</p>
+        <p>Weil die Minijob-Grenze an den Mindestlohn gekoppelt ist, steigt sie mit jeder Erhöhung mit. Mit dem Stundenlohnrechner prüfen Sie schnell, ob Ihr Gehalt über der Mindestlohngrenze liegt.</p>
+      </div>
+      <div class="table-wrap small-t">
+        <table>
+          <thead><tr><th>Gültig ab</th><th>Mindestlohn</th></tr></thead>
+          <tbody>
+            <tr><td>01.01.2015</td><td>8,50 €</td></tr>
+            <tr><td>01.10.2022</td><td>12,00 €</td></tr>
+            <tr><td>01.01.2024</td><td>12,41 €</td></tr>
+            <tr><td>01.01.2025</td><td>12,82 €</td></tr>
+            <tr class="hl"><td>01.01.2026</td><td>13,90 €</td></tr>
+            <tr><td>01.01.2027</td><td>14,60 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BRUTTO NETTO + LINKS ================= -->
+  <section class="sec">
+    <p class="eye">Gut zu wissen</p>
+    <h2>Brutto, Netto und Überstunden</h2>
+    <div class="info3">
+      <article>
+        <h3>Brutto ist nicht Netto</h3>
+        <p>Der Stundenlohnrechner arbeitet mit Bruttowerten. Was netto übrig bleibt, hängt von Steuerklasse, Kinderfreibeträgen, Kirchensteuer und den Sozialabgaben ab. Grob gilt: Bei Steuerklasse I bleiben je nach Einkommen etwa 60 bis 70 Prozent vom Brutto.</p>
+      </article>
+      <article>
+        <h3>Echte Arbeitsstunden zählen</h3>
+        <p>Wer regelmäßig länger bleibt, verdient pro Stunde weniger als vertraglich vereinbart. Erfassen Sie Ihre tatsächlichen Zeiten und addieren Sie mehrere Tage mit dem <a href="https://arbeitszeitsrechner.com.de/stundenrechner">stunden rechner</a> – so sehen Sie Ihren realen Stundenlohn.</p>
+      </article>
+      <article>
+        <h3>Überstunden bezahlt bekommen</h3>
+        <p>Werden Überstunden ausgezahlt, ist der Stundenlohn die Basis – oft plus Zuschlag. Wie viel Ihnen genau zusteht, ermitteln Sie mit dem <a href="https://arbeitszeitsrechner.com.de/ueberstundenrechner">überstunden auszahlen rechner</a>.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="sec">
+    <p class="eye">FAQ</p>
+    <h2>Häufige Fragen zum Stundenlohnrechner</h2>
+    <div class="faq">
+      <details open><summary>Wie berechne ich meinen Stundenlohn aus dem Monatsgehalt?</summary><p>Teilen Sie Ihr Bruttomonatsgehalt durch die durchschnittlichen Arbeitsstunden pro Monat. Diese ergeben sich aus Wochenstunden × 52 ÷ 12. Bei 3.000 Euro und 40 Wochenstunden sind das 3.000 ÷ 173,33 = 17,31 Euro pro Stunde.</p></details>
+      <details><summary>Wie hoch ist der Mindestlohn 2026?</summary><p>Seit dem 1. Januar 2026 beträgt der gesetzliche Mindestlohn in Deutschland 13,90 Euro brutto pro Stunde. Zum 1. Januar 2027 steigt er auf 14,60 Euro.</p></details>
+      <details><summary>Wie viel ist 2.500 Euro brutto im Stundenlohn?</summary><p>Bei 40 Wochenstunden entspricht ein Bruttogehalt von 2.500 Euro einem Stundenlohn von 14,42 Euro. Bei 35 Wochenstunden sind es 16,48 Euro.</p></details>
+      <details><summary>Rechnet der Stundenlohnrechner brutto oder netto?</summary><p>Der Stundenlohnrechner rechnet mit Bruttobeträgen. Der Nettostundenlohn hängt von Steuerklasse, Kirchensteuer und Sozialabgaben ab und fällt individuell niedriger aus.</p></details>
+      <details><summary>Wie viele Stunden darf ich im Minijob 2026 arbeiten?</summary><p>Die Minijob-Grenze liegt 2026 bei 603 Euro im Monat. Zum Mindestlohn von 13,90 Euro sind das rund 43 Stunden pro Monat.</p></details>
+      <details><summary>Zählen Weihnachtsgeld und Urlaubsgeld zum Stundenlohn?</summary><p>Wenn Sie Ihren echten Stundenlohn kennen möchten, sollten Sie regelmäßige Sonderzahlungen einbeziehen. Tragen Sie diese im Stundenlohnrechner als jährliche Sonderzahlung ein.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr" id="kontakt">
+  <div class="wrap ftr-in">
+    <div>
+      <span class="logo-tx light">Stundenlohn<b>rechner</b></span>
+      <p>Gehalt in Stundenlohn umrechnen – kostenlos, schnell und mit aktuellem Mindestlohn 2026.</p>
+    </div>
+    <nav>
+      <a href="#rechner">Zum Rechner</a>
+      <a href="#mindestlohn">Mindestlohn 2026</a>
+      <a href="#">Kontakt</a>
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+    </nav>
+  </div>
+  <p class="wrap ftr-copy">© <span id="yr"></span> Stundenlohnrechner · Alle Angaben ohne Gewähr, Beträge brutto.</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id);};
+  var MW=13.90;
+  function num(v){ v=String(v).replace(/\./g,function(m,i,s){ return s.indexOf(',')>-1?'':'.'; }).replace(',','.'); var n=parseFloat(v); return isNaN(n)?0:n; }
+  function eur(v){ return v.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2})+' €'; }
+  function de2(v){ return v.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+  function toast(t){ var e=$('toast'); e.textContent=t; e.classList.add('show'); clearTimeout(e._t); e._t=setTimeout(function(){e.classList.remove('show');},2000); }
+  function copy(t){
+    if(navigator.clipboard&&window.isSecureContext){ navigator.clipboard.writeText(t).then(function(){toast('Ergebnis kopiert');}); return; }
+    var a=document.createElement('textarea'); a.value=t; document.body.appendChild(a); a.select(); try{document.execCommand('copy');toast('Ergebnis kopiert');}catch(e){} a.remove();
+  }
+  function radios(id,cb){
+    var box=$(id);
+    box.querySelectorAll('button').forEach(function(b){ b.addEventListener('click',function(){ box.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b);}); cb(); }); });
+    return function(){ return parseFloat(box.querySelector('.on').dataset.v); };
+  }
+
+  /* Tabs */
+  document.querySelectorAll('.tab').forEach(function(t){
+    t.addEventListener('click',function(){
+      document.querySelectorAll('.tab').forEach(function(x){x.classList.toggle('on',x===t);});
+      document.querySelectorAll('.panel').forEach(function(p){p.classList.toggle('on',p.id===t.dataset.p);});
+    });
+  });
+
+  /* P1: Gehalt -> Stundenlohn */
+  var period=radios('g-period',p1);
+  var t1='';
+  function p1(){
+    var amt=Math.max(0,num($('g-amount').value));
+    var h=Math.max(0.5,num($('g-hours').value)||40);
+    var d=Math.max(1,parseInt($('g-days').value,10)||5);
+    var extra=Math.max(0,num($('g-extra').value));
+    var year=amt*period()+extra;
+    var hYear=h*52;
+    var rate=year/hYear;
+    $('r-hour').textContent=de2(rate);
+    $('r-day').textContent=eur(year/52/d);
+    $('r-week').textContent=eur(year/52);
+    $('r-month').textContent=eur(year/12);
+    $('r-year').textContent=eur(year);
+    $('r-min').textContent=eur(rate/60);
+    $('r-mh').textContent=de2(hYear/12);
+    var pct=(rate/MW-1)*100;
+    var el=$('r-mwpct'); el.textContent=(pct>=0?'+':'')+Math.round(pct)+' %'; el.className=pct>=0?'up':'down';
+    $('r-mwbar').style.width=Math.min(100,rate/(MW*2)*100)+'%';
+    $('r-mwbar').className=pct>=0?'up':'down';
+    $('r-mwtxt').textContent=pct>=0
+      ? 'Ihr Stundenlohn liegt '+de2(rate-MW)+' € über dem gesetzlichen Mindestlohn.'
+      : 'Achtung: Ihr Stundenlohn liegt '+de2(MW-rate)+' € unter dem Mindestlohn von 13,90 €.';
+    t1='Stundenlohn: '+de2(rate)+' € brutto ('+eur(year/12)+' pro Monat, '+String(h).replace('.',',')+' Std./Woche) – Stundenlohnrechner';
+  }
+  ['g-amount','g-hours','g-days','g-extra'].forEach(function(id){$(id).addEventListener('input',p1);});
+  document.querySelectorAll('.presets button').forEach(function(b){ b.addEventListener('click',function(){ $('g-hours').value=b.dataset.h; p1(); }); });
+  $('c1').addEventListener('click',function(){copy(t1);});
+
+  /* P2: Stundenlohn -> Gehalt */
+  var t2='';
+  function p2(){
+    var r=Math.max(0,num($('s-rate').value));
+    var h=Math.max(0.5,num($('s-hours').value)||40);
+    var d=Math.max(1,parseInt($('s-days').value,10)||5);
+    var week=r*h, year=week*52;
+    $('s-month').textContent=de2(year/12);
+    $('s-day').textContent=eur(week/d);
+    $('s-week').textContent=eur(week);
+    $('s-year').textContent=eur(year);
+    $('s-mh').textContent=de2(h*52/12);
+    t2=de2(r)+' € pro Stunde bei '+String(h).replace('.',',')+' Std./Woche = '+eur(year/12)+' brutto pro Monat – Stundenlohnrechner';
+  }
+  ['s-rate','s-hours','s-days'].forEach(function(id){$(id).addEventListener('input',p2);});
+  $('s-mw').addEventListener('click',function(){ $('s-rate').value='13.90'; p2(); });
+  $('c2').addEventListener('click',function(){copy(t2);});
+
+  /* P3: Verdienst */
+  var plus=radios('v-plus',p3);
+  var t3='';
+  function p3(){
+    var v=$('v-time').value.trim(), hrs=0;
+    if(/^\d+:\d{1,2}$/.test(v)){ var p=v.split(':'); hrs=(+p[0])+(+p[1])/60; } else { hrs=Math.max(0,num(v)); }
+    var r=Math.max(0,num($('v-rate').value));
+    var base=hrs*r, add=base*plus()/100, tot=base+add;
+    $('v-total').textContent=de2(tot);
+    $('v-dec').textContent=de2(hrs);
+    $('v-base').textContent=eur(base);
+    $('v-add').textContent=eur(add);
+    $('v-eff').textContent=eur(hrs>0?tot/hrs:0);
+    t3=de2(hrs)+' Std. × '+de2(r)+' € + '+plus()+' % Zuschlag = '+eur(tot)+' brutto – Stundenlohnrechner';
+  }
+  ['v-time','v-rate'].forEach(function(id){$(id).addEventListener('input',p3);});
+  $('c3').addEventListener('click',function(){copy(t3);});
+
+  document.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){document.querySelector('.menu').classList.remove('open');});});
+  $('yr').textContent=new Date().getFullYear();
+  p1(); p2(); p3();
+})();
+</script>
+</body>
+</html>
